@@ -19,8 +19,8 @@
     "full": "Search messaging extension based on the Northwind database OData service"
   },
   "icons": {
-    "outline": "icon-outline.png",
-    "color": "icon-color.png"
+    "outline": "OData32.png",
+    "color": "OData192.png"
   },
   "accentColor": "#D85028",
   "configurableTabs": [],
