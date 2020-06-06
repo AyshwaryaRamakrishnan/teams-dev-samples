@@ -1,0 +1,59 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "id": "165dcad0-a771-11ea-be29-d7a6a6dc0aa1",
+  "version": "0.0.1",
+  "packageName": "customersearch",
+  "developer": {
+    "name": "Contoso",
+    "websiteUrl": "https://pnp.github.io/",
+    "privacyUrl": "https://privacy.microsoft.com/",
+    "termsOfUseUrl": "https://pnp.github.io/sharing-is-caring/"
+  },
+  "name": {
+    "short": "Customer Search",
+    "full": "Reference Northwind customer details in your conversations"
+  },
+  "description": {
+    "short": "Simple Search messaging extension",
+    "full": "Search messaging extension based on the Northwind database OData service"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [],
+  "bots": [],
+  "connectors": [],
+  "composeExtensions": [
+    {
+      "botId": "4ae54c1b-d7ee-4075-a803-d1846cebe36c",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "customerSearch",
+          "type": "query",
+          "title": "Customers",
+          "description": "Search for a customer.",
+          "context": [
+            "compose"
+          ],
+          "parameters": [
+            {
+              "name": "searchKeyword",
+              "description": "Enter customer name",
+              "title": "Customer"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [ ]
+}
