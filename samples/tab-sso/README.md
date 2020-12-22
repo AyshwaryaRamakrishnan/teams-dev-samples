@@ -90,6 +90,8 @@ New-Guid
 
 4. From within the [`src`](src) folder, in the command line, run the `gulp` command (you will need the [gulp.js](https://gulpjs.com/) task runner installed to do this). This will generate a .zip manifest file that can be easily uploaded to Microsoft Teams.
 
+5. If using NodeJS version, the `{contentUrl}` value in staticTabs section must be replaced to `"https://{ngrokSubdomain}.ngrok.io/tab"` instead of `"https://{ngrokSubdomain}.ngrok.io/ssoDemo"`. The ssoDemo route is not available in the NodeJS version of the solution
+
 ### 5. Upload the manifest to Teams
 
 There are a few possible options to do this, depending on your development tools and platform. The easiest is simple to use Teams' [App Studio](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/app-studio-overview) tool, in particular the [`manifest editor`](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/build-and-test/app-studio-overview#manifest-editor) tab which allows you to import a manifest (i.e. the one you created in step 4 above) and immediately install it.
